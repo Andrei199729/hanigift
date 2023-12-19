@@ -1,0 +1,53 @@
+<svg width="1144" height="639" viewBox="0 0 1144 639" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_906_6485)">
+<path d="M368.183 638.75H14.25V0.25H1129.75V638.75H368.183Z" stroke="black" stroke-width="0.5"/>
+<path d="M0.25 626.067V14.2527L1143.75 14.25V626.067H792.844H0.25Z" stroke="black" stroke-width="0.5"/>
+<g clip-path="url(#clip1_906_6485)">
+<circle cx="1086.5" cy="7.5" r="3.25" transform="rotate(90 1086.5 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="975.6" cy="7.5" r="3.25" transform="rotate(90 975.6 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="864.7" cy="7.5" r="3.25" transform="rotate(90 864.7 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="753.8" cy="7.5" r="3.25" transform="rotate(90 753.8 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="642.9" cy="7.5" r="3.25" transform="rotate(90 642.9 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="532" cy="7.5" r="3.25" transform="rotate(90 532 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="421.1" cy="7.5" r="3.25" transform="rotate(90 421.1 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="310.2" cy="7.5" r="3.25" transform="rotate(90 310.2 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="199.3" cy="7.5" r="3.25" transform="rotate(90 199.3 7.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="88.4004" cy="7.5" r="3.25" transform="rotate(90 88.4004 7.5)" stroke="black" stroke-width="0.5"/>
+</g>
+<g clip-path="url(#clip2_906_6485)">
+<circle cx="1087.25" cy="632.5" r="3.25" transform="rotate(90 1087.25 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="976.35" cy="632.5" r="3.25" transform="rotate(90 976.35 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="865.45" cy="632.5" r="3.25" transform="rotate(90 865.45 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="754.55" cy="632.5" r="3.25" transform="rotate(90 754.55 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="643.65" cy="632.5" r="3.25" transform="rotate(90 643.65 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="532.75" cy="632.5" r="3.25" transform="rotate(90 532.75 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="421.85" cy="632.5" r="3.25" transform="rotate(90 421.85 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="310.95" cy="632.5" r="3.25" transform="rotate(90 310.95 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="200.05" cy="632.5" r="3.25" transform="rotate(90 200.05 632.5)" stroke="black" stroke-width="0.5"/>
+<circle cx="89.1504" cy="632.5" r="3.25" transform="rotate(90 89.1504 632.5)" stroke="black" stroke-width="0.5"/>
+</g>
+<circle cx="7.5" cy="57.5" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="7.5" cy="162.3" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="7.5" cy="267.1" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="7.5" cy="371.9" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="7.5" cy="476.7" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="7.5" cy="581.5" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="57.5" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="162.3" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="267.1" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="371.9" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="476.7" r="3.25" stroke="black" stroke-width="0.5"/>
+<circle cx="1136.5" cy="581.5" r="3.25" stroke="black" stroke-width="0.5"/>
+</g>
+<defs>
+<clipPath id="clip0_906_6485">
+<rect width="1144" height="639" fill="white"/>
+</clipPath>
+<clipPath id="clip1_906_6485">
+<rect width="13" height="1116" fill="white" transform="translate(1130 1) rotate(90)"/>
+</clipPath>
+<clipPath id="clip2_906_6485">
+<rect width="13" height="1116" fill="white" transform="translate(1130.75 626) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>
