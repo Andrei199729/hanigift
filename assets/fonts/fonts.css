@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("./Nunito_Sans/NunitoSans_10pt-Light.eot");
+  src: url("./Nunito_Sans/NunitoSans_10pt-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Nunito_Sans/NunitoSans_10pt-Light.woff2") format("woff2"),
+    url("./Nunito_Sans/NunitoSans_10pt-Light.woff") format("woff"),
+    url("./Nunito_Sans/NunitoSans_10pt-Light.ttf") format("truetype"),
+    url("./Nunito_Sans/NunitoSans_10pt-Light.svg#NNunitoSans_10pt-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("./Nunito_Sans/NunitoSans_10pt-Regular.eot");
+  src: url("./Nunito_Sans/NNunitoSans_10pt-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./Nunito_Sans/NunitoSans_10pt-Regular.woff2") format("woff2"),
+    url("./Nunito_Sans/NunitoSans_10pt-Regular.woff") format("woff"),
+    url("./Nunito_Sans/NunitoSans_10pt-Regular.ttf") format("truetype"),
+    url("./Nunito_Sans/NunitoSans_10pt-Regular.svg#NunitoSans_10pt-Regular")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

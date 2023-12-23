@@ -4,6 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/media.css">
 
@@ -15,32 +24,31 @@
         <header class="header">
             <div class="header__container">
                 <div class="header__box">
-                    <ul class="header__lists">
+                    <ul class="header__lists header__lists-menu__burger">
                         <li class="header__list"><a class="header__list-link" href="#">Оплата и доставка</a></li>
                         <li class="header__list"><a class="header__list-link" href="#">О компании</a></li>
                         <li class="header__list"><a class="header__list-link" href="#">Партнерам</a></li>
                         <li class="header__list"><a class="header__list-link" href="#">Новости</a></li>
                         <li class="header__list"><a class="header__list-link" href="#">Контакты</a></li>
                     </ul>
-                    <div class="header__box">
+                    <div class="header__box header__box_icons">
                         <div class="header__box-search">
                             <form class="form__search">
                                 <label class="form__search-label">
-                                    <input type="search" name="" id="" class="input" placeholder="Поиск">
-                                    <button class="btn__search">
-                                        <img src="/assets/img/search.svg" alt="search">
-                                    </button>
+                                    <input type="search" name="" id="" class="form__search-input" placeholder="Поиск">
+                                    <button class="btn__search"></button>
                                 </label>
                             </form>
                         </div>
                         <div class="header__box-user">
                             <a class="header__box-user__link" href=""><img class="header__box-user__image"
                                     src="./assets/img/profile.svg" alt="Профиль"></a>
-                            <a class="header__box-user__link" href=""><img class="header__box-user__image"
-                                    src="./assets/img/heart.svg" alt="Избранные"></a>
+                            <a class="header__box-user__link header__box-user__link_heart" href=""><img
+                                    class="header__box-user__image" src="./assets/img/heart.svg" alt="Избранные"></a>
                             <a class="header__box-user__link" href=""><img class="header__box-user__image"
                                     src="./assets/img/cart.svg" alt="Корзина"></a>
                         </div>
+                        <div class="header__menu-burger"></div>
                     </div>
                 </div>
             </div>
@@ -208,7 +216,7 @@
             </section>
             <section class="hits">
                 <div class="hits__container-lists">
-                    <div class="hits__container-list">
+                    <div class="hits__container-list hits__container-list_man">
                         <img class="hits__container-list__image" src="./assets/img/ak_star.svg" alt="icon">
                         <div class="hits__container-list__block">
                             <h3 class="hits__container-list__subtitle">Подарки мужчинам</h3>
@@ -220,7 +228,7 @@
                             <button class="hits__container-btn">Показать еще</button>
                         </div>
                     </div>
-                    <div class="hits__container-list">
+                    <div class="hits__container-list hits__container-list_surprise">
                         <img class="hits__container-list__image" src="./assets/img/child.svg" alt="icon">
                         <div class="hits__container-list__block">
                             <h3 class="hits__container-list__subtitle">Сувениры и подарки</h3>
@@ -232,7 +240,7 @@
                             <button class="hits__container-btn">Показать еще</button>
                         </div>
                     </div>
-                    <div class="hits__container-list">
+                    <div class="hits__container-list hits__container-list_corporation">
                         <img class="hits__container-list__image" src="./assets/img/surprise.svg" alt="icon">
                         <div class="hits__container-list__block">
                             <h3 class="hits__container-list__subtitle">Корпоративные подарки</h3>
@@ -254,8 +262,8 @@
                         </div>
                     </div>
                     <div class="hits__container-slider">
-                        <div class="hits__slider-line">
-                            <div class="hits__container-slid">
+                        <div class="swiper-wrapper hits__slider-line">
+                            <div class="swiper-slide hits__container-slid">
                                 <div class="hits__container-slid__box">
                                     <div class="hits__container-price">
                                         <p class="hits__price-through">1200&#8381;</p>
@@ -266,7 +274,7 @@
                                     <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
                                 </div>
                             </div>
-                            <div class="hits__container-slid">
+                            <div class="swiper-slide hits__container-slid">
                                 <div class="hits__container-slid__box">
                                     <div class="hits__container-price">
                                         <p class="hits__price-through">1200&#8381;</p>
@@ -277,7 +285,7 @@
                                     <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
                                 </div>
                             </div>
-                            <div class="hits__container-slid">
+                            <div class="swiper-slide hits__container-slid">
                                 <div class="hits__container-slid__box">
                                     <div class="hits__container-price">
                                         <p class="hits__price-through">1200&#8381;</p>
@@ -288,7 +296,40 @@
                                     <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
                                 </div>
                             </div>
-                            <div class="hits__container-slid">
+                            <div class="swiper-slide hits__container-slid">
+                                <div class="hits__container-slid__box">
+                                    <div class="hits__container-price">
+                                        <p class="hits__price-through">1200&#8381;</p>
+                                        <p class="hits__price-new">1120&#8381;</p>
+                                    </div>
+                                    <img class="hits__image" src="./assets/img/revolver.png" alt="Зажигалка " РЕВОЛЬВЕР"
+                                        в кобуре">
+                                    <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hits__container-slid">
+                                <div class="hits__container-slid__box">
+                                    <div class="hits__container-price">
+                                        <p class="hits__price-through">1200&#8381;</p>
+                                        <p class="hits__price-new">1120&#8381;</p>
+                                    </div>
+                                    <img class="hits__image" src="./assets/img/revolver.png" alt="Зажигалка " РЕВОЛЬВЕР"
+                                        в кобуре">
+                                    <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hits__container-slid">
+                                <div class="hits__container-slid__box">
+                                    <div class="hits__container-price">
+                                        <p class="hits__price-through">1200&#8381;</p>
+                                        <p class="hits__price-new">1120&#8381;</p>
+                                    </div>
+                                    <img class="hits__image" src="./assets/img/revolver.png" alt="Зажигалка " РЕВОЛЬВЕР"
+                                        в кобуре">
+                                    <p class="hits__name">Зажигалка "РЕВОЛЬВЕР" в кобуре (большой) 13 *18,5 см</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide hits__container-slid">
                                 <div class="hits__container-slid__box">
                                     <div class="hits__container-price">
                                         <p class="hits__price-through">1200&#8381;</p>
@@ -305,61 +346,72 @@
             </section>
             <section class="population">
                 <div class="population__container">
-                    <h2 class="population__title">Популярное</h2>
-                    <div class="population__block">
-                        <div class="population__block-product">
-                            <div class="population__block-bg population__block-product__one">
-                                <div class="population__block-paragraphs">
-                                    <p class="population__block-paragraph__name">Подарочный набор "Талисман из Удмуртии"
-                                    </p>
-                                    <p class="population__block-paragraph__through">1000&#8381;</p>
-                                    <p class="population__block-paragraph__new">700&#8381;</p>
+                    <div>
+                        <h2 class="population__title">Популярное</h2>
+                        <div class="population__block">
+                            <div class="population__block-product">
+                                <div class="population__block-bg population__block-product__one">
+                                    <div class="population__block-paragraphs">
+                                        <p class="population__block-paragraph__name">Подарочный набор "Талисман из
+                                            Удмуртии"
+                                        </p>
+                                        <p class="population__block-paragraph__through">1000&#8381;</p>
+                                        <p class="population__block-paragraph__new">700&#8381;</p>
+                                    </div>
+                                    <img class="population__block-image__podarok" src="./assets/img/podarokone.png"
+                                        alt="Подарочный набор Талисман из Удмуртии">
                                 </div>
-                                <img class="population__block-image__podarok" src="./assets/img/podarokone.png"
-                                    alt="Подарочный набор " Талисман из Удмуртии"">
-                            </div>
-                            <div class="population__block-bg population__block-product__two">
-                                <div class="population__block-paragraphs">
-                                    <p class="population__block-paragraph__through">4000&#8381;</p>
-                                    <p class="population__block-paragraph__new">3750&#8381;</p>
-                                    <p class="population__block-paragraph__name population__block-paragraph__name_ak">
-                                        Сувенирное оружие макет
-                                        Автомата
-                                        Калашников АК-47 в ящике
-                                    </p>
-                                </div>
-                                <img class="population__block-image__ak-47" src="./assets/img/ak_47_box.png" alt="Сувенирное оружие макет
+                                <div class="population__block-box">
+                                    <div class="population__block-bg population__block-product__two">
+                                        <div class="population__block-paragraphs">
+                                            <p class="population__block-paragraph__through">4000&#8381;</p>
+                                            <p class="population__block-paragraph__new">3750&#8381;</p>
+                                            <p
+                                                class="population__block-paragraph__name population__block-paragraph__name_ak">
+                                                Сувенирное оружие макет
+                                                Автомата
+                                                Калашников АК-47 в ящике
+                                            </p>
+                                        </div>
+                                        <img class="population__block-image__ak-47" src="./assets/img/ak_47_box.png"
+                                            alt="Сувенирное оружие макет
                                             Автомата
                                             Калашников АК-47 в ящике">
-                            </div>
-                            <div
-                                class="population__block-bg population__block-product__squares population__block-product__three">
-                                <div class="population__block-paragraphs population__block-paragraphs_flex">
-                                    <p class="population__block-paragraph__through">6000&#8381;</p>
-                                    <p class="population__block-paragraph__new">5800&#8381;</p>
+                                    </div>
+                                    <div class="population__block-box__squares">
+                                        <div
+                                            class="population__block-bg population__block-product__squares population__block-product__three">
+                                            <div class="population__block-paragraphs population__block-paragraphs_flex">
+                                                <p class="population__block-paragraph__through">6000&#8381;</p>
+                                                <p class="population__block-paragraph__new">5800&#8381;</p>
+                                            </div>
+                                            <img class="population__block-image__knife" src="./assets/img/knife.png"
+                                                alt="Нож Н6, ст.95х18, дюраль, кожа">
+                                            <p
+                                                class="population__block-paragraph__name population__block-paragraph__name_squares population__block-paragraph__name_knife">
+                                                Нож Н6, ст.95х18, дюраль, кожа
+                                            </p>
+
+                                        </div>
+                                        <div
+                                            class="population__block-bg population__block-product__squares population__block-product__four">
+                                            <div class="population__block-paragraphs population__block-paragraphs_flex">
+                                                <p class="population__block-paragraph__through">3000&#8381;</p>
+                                                <p class="population__block-paragraph__new">2800&#8381;</p>
+                                            </div>
+                                            <img class="population__block-image__pencile" src="./assets/img/pencile.png"
+                                                alt="Ручка-патрон в деревянном ящике">
+                                            <p
+                                                class="population__block-paragraph__name population__block-paragraph__name_squares population__block-paragraph__name_pencile">
+                                                Ручка-патрон в деревянном ящике
+                                            </p>
+
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="population__block-paragraph__name population__block-paragraph__name_squares">
-                                    Нож Н6, ст.95х18, дюраль, кожа
-                                </p>
-                                <img class="population__block-image__knife" src="./assets/img/knife.png"
-                                    alt="Нож Н6, ст.95х18, дюраль, кожа">
-                            </div>
-                            <div
-                                class="population__block-bg population__block-product__squares population__block-product__four">
-                                <div class="population__block-paragraphs population__block-paragraphs_flex">
-                                    <p class="population__block-paragraph__through">3000&#8381;</p>
-                                    <p class="population__block-paragraph__new">2800&#8381;</p>
-                                </div>
-                                <p
-                                    class="population__block-paragraph__name population__block-paragraph__name_squares population__block-paragraph__name_pencile">
-                                    Ручка-патрон в деревянном ящике
-                                </p>
-                                <img class="population__block-image__pencile" src="./assets/img/pencile.png"
-                                    alt="Ручка-патрон в деревянном ящике">
                             </div>
                         </div>
                     </div>
-                </div>
             </section>
             <section class="info">
                 <div class="info__container">
@@ -400,8 +452,8 @@
                 <div class="reviews__container">
                     <h2 class="reviews__title">Отзывы о ХАНИ</h2>
                     <div class="reviews__slider">
-                        <div class="reviews__slider-container__line">
-                            <article class="reviews__slider-article">
+                        <div class="swiper-wrapper reviews__slider-container__line">
+                            <article class="swiper-slide reviews__slider-article active">
                                 <p class="reviews__slider-paragraph">Отличный выбор сувениров и подарков в магазине
                                     'ХАНИ'. Я там всегда нахожу что-то
                                     интересное и неповторимое. Персонал
@@ -420,7 +472,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="reviews__slider-article">
+                            <article class="swiper-slide reviews__slider-article">
                                 <p class="reviews__slider-paragraph">Отличный выбор сувениров и подарков в магазине
                                     'ХАНИ'. Я там всегда нахожу что-то
                                     интересное и неповторимое. Персонал
@@ -448,7 +500,7 @@
             </section>
             <section class="recently-purchased">
                 <div class="recently-purchased__container">
-                    <div class="recently-purchased__block-slider hits__block-slider">
+                    <div class="swiper-wrapper hits__block-slider recently-purchased__block-slider">
                         <h2 class="recently-purchased__block-slider__title hits__block-slider__title">Недавно купили
                         </h2>
                         <div class="recently-purchased__block-btn__box hits__slider-btn__box">
@@ -459,11 +511,11 @@
                         </div>
                     </div>
                     <div class="recently-purchased__slider">
-                        <div class="recently-purchased__slider-container__line">
-                            <article class="recently-purchased__slider-articale">
+                        <div class="swiper-wrapper recently-purchased__slider-container__line">
+                            <article class="swiper-slide recently-purchased__slider-articale">
                                 <div class="recently-purchased__slider-block">
                                     <img class="recently-purchased__slider-image__card"
-                                        src="/assets/img/image_rescentle.png" alt="image">
+                                        src="./assets/img/image_rescentle.png" alt="image">
                                     <button class="recently-purchased__slider-btn__heart">
                                         <svg class="recently-purchased__slider-image__heart" width="22" height="20"
                                             viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -482,10 +534,10 @@
                                 <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
                                 </p>
                             </article>
-                            <article class="recently-purchased__slider-articale">
+                            <article class="swiper-slide recently-purchased__slider-articale">
                                 <div class="recently-purchased__slider-block">
                                     <img class="recently-purchased__slider-image__card"
-                                        src="/assets/img/image_rescentle.png" alt="image">
+                                        src="./assets/img/image_rescentle.png" alt="image">
                                     <button class="recently-purchased__slider-btn__heart">
                                         <svg class="recently-purchased__slider-image__heart" width="22" height="20"
                                             viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -504,10 +556,10 @@
                                 <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
                                 </p>
                             </article>
-                            <article class="recently-purchased__slider-articale">
+                            <article class="swiper-slide recently-purchased__slider-articale">
                                 <div class="recently-purchased__slider-block">
                                     <img class="recently-purchased__slider-image__card"
-                                        src="/assets/img/image_rescentle.png" alt="image">
+                                        src="./assets/img/image_rescentle.png" alt="image">
                                     <button class="recently-purchased__slider-btn__heart">
                                         <svg class="recently-purchased__slider-image__heart" width="22" height="20"
                                             viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -526,10 +578,76 @@
                                 <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
                                 </p>
                             </article>
-                            <article class="recently-purchased__slider-articale">
+                            <article class="swiper-slide recently-purchased__slider-articale">
                                 <div class="recently-purchased__slider-block">
                                     <img class="recently-purchased__slider-image__card"
-                                        src="/assets/img/image_rescentle.png" alt="image">
+                                        src="./assets/img/image_rescentle.png" alt="image">
+                                    <button class="recently-purchased__slider-btn__heart">
+                                        <svg class="recently-purchased__slider-image__heart" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2.80674 3.20659C3.70687 2.30673 4.92755 1.80122 6.20034 1.80122C7.47313 1.80122 8.69381 2.30673 9.59394 3.20659L11.0003 4.61179L12.4067 3.20659C12.8495 2.74815 13.3792 2.38247 13.9648 2.13091C14.5504 1.87934 15.1803 1.74693 15.8176 1.74139C16.455 1.73585 17.087 1.8573 17.6769 2.09865C18.2668 2.34 18.8028 2.69641 19.2534 3.1471C19.7041 3.59778 20.0605 4.13371 20.3019 4.72361C20.5432 5.31352 20.6647 5.94558 20.6591 6.58292C20.6536 7.22026 20.5212 7.85012 20.2696 8.43574C20.0181 9.02136 19.6524 9.55101 19.1939 9.99379L11.0003 18.1886L2.80674 9.99379C1.90688 9.09366 1.40137 7.87298 1.40137 6.60019C1.40137 5.32741 1.90688 4.10673 2.80674 3.20659V3.20659Z"
+                                                stroke="#F5F5F5" stroke-width="1.8" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="recently-purchased__slider-block__price">
+                                    <p class="recently-purchased__slider-price">5800 &#8381;</p>
+                                    <img class="recently-purchased__slider-image__cart" src="./assets/img/cart.svg"
+                                        alt="Корзина">
+                                </div>
+                                <p class="recently-purchased__slider-name">Стаканы и рюмки с пулей</p>
+                                <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
+                                </p>
+                            </article>
+                            <article class="swiper-slide recently-purchased__slider-articale">
+                                <div class="recently-purchased__slider-block">
+                                    <img class="recently-purchased__slider-image__card"
+                                        src="./assets/img/image_rescentle.png" alt="image">
+                                    <button class="recently-purchased__slider-btn__heart">
+                                        <svg class="recently-purchased__slider-image__heart" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2.80674 3.20659C3.70687 2.30673 4.92755 1.80122 6.20034 1.80122C7.47313 1.80122 8.69381 2.30673 9.59394 3.20659L11.0003 4.61179L12.4067 3.20659C12.8495 2.74815 13.3792 2.38247 13.9648 2.13091C14.5504 1.87934 15.1803 1.74693 15.8176 1.74139C16.455 1.73585 17.087 1.8573 17.6769 2.09865C18.2668 2.34 18.8028 2.69641 19.2534 3.1471C19.7041 3.59778 20.0605 4.13371 20.3019 4.72361C20.5432 5.31352 20.6647 5.94558 20.6591 6.58292C20.6536 7.22026 20.5212 7.85012 20.2696 8.43574C20.0181 9.02136 19.6524 9.55101 19.1939 9.99379L11.0003 18.1886L2.80674 9.99379C1.90688 9.09366 1.40137 7.87298 1.40137 6.60019C1.40137 5.32741 1.90688 4.10673 2.80674 3.20659V3.20659Z"
+                                                stroke="#F5F5F5" stroke-width="1.8" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="recently-purchased__slider-block__price">
+                                    <p class="recently-purchased__slider-price">5800 &#8381;</p>
+                                    <img class="recently-purchased__slider-image__cart" src="./assets/img/cart.svg"
+                                        alt="Корзина">
+                                </div>
+                                <p class="recently-purchased__slider-name">Стаканы и рюмки с пулей</p>
+                                <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
+                                </p>
+                            </article>
+                            <article class="swiper-slide recently-purchased__slider-articale">
+                                <div class="recently-purchased__slider-block">
+                                    <img class="recently-purchased__slider-image__card"
+                                        src="./assets/img/image_rescentle.png" alt="image">
+                                    <button class="recently-purchased__slider-btn__heart">
+                                        <svg class="recently-purchased__slider-image__heart" width="22" height="20"
+                                            viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M2.80674 3.20659C3.70687 2.30673 4.92755 1.80122 6.20034 1.80122C7.47313 1.80122 8.69381 2.30673 9.59394 3.20659L11.0003 4.61179L12.4067 3.20659C12.8495 2.74815 13.3792 2.38247 13.9648 2.13091C14.5504 1.87934 15.1803 1.74693 15.8176 1.74139C16.455 1.73585 17.087 1.8573 17.6769 2.09865C18.2668 2.34 18.8028 2.69641 19.2534 3.1471C19.7041 3.59778 20.0605 4.13371 20.3019 4.72361C20.5432 5.31352 20.6647 5.94558 20.6591 6.58292C20.6536 7.22026 20.5212 7.85012 20.2696 8.43574C20.0181 9.02136 19.6524 9.55101 19.1939 9.99379L11.0003 18.1886L2.80674 9.99379C1.90688 9.09366 1.40137 7.87298 1.40137 6.60019C1.40137 5.32741 1.90688 4.10673 2.80674 3.20659V3.20659Z"
+                                                stroke="#F5F5F5" stroke-width="1.8" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="recently-purchased__slider-block__price">
+                                    <p class="recently-purchased__slider-price">5800 &#8381;</p>
+                                    <img class="recently-purchased__slider-image__cart" src="./assets/img/cart.svg"
+                                        alt="Корзина">
+                                </div>
+                                <p class="recently-purchased__slider-name">Стаканы и рюмки с пулей</p>
+                                <p class="recently-purchased__slider-paragraph">Набор Фужеров "Brandy" 2 х 410 мл (BOX)
+                                </p>
+                            </article>
+                            <article class="swiper-slide recently-purchased__slider-articale">
+                                <div class="recently-purchased__slider-block">
+                                    <img class="recently-purchased__slider-image__card"
+                                        src="./assets/img/image_rescentle.png" alt="image">
                                     <button class="recently-purchased__slider-btn__heart">
                                         <svg class="recently-purchased__slider-image__heart" width="22" height="20"
                                             viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -595,60 +713,74 @@
                 <div class="footer__block">
                     <div class="footer__block-logo">
                         <img class="footer__image-logo" src="./assets/img/logo_footer.svg" alt="logo">
-                        <p class="footer__image-logo">Подарок - это не вещь, а способ передачи человеческих чувств</p>
+                        <p class="footer__image-logo__text">Подарок - это не вещь, а способ передачи человеческих чувств
+                        </p>
                     </div>
-                    <div class="footer__block-data">
-                        <div class="footer__data footer__block-tel">
-                            <img src="./assets/img/call.svg" alt="icon">
-                            <div class="footer__block-call">
-                                <a class="footer__text" href="tel:+73412321013">+7 (3412) 321013,</a>
-                                <a class="footer__text" href="tel:+79658421013">+7 (965) 8421013</a>
+                    <div class="footer__block-box">
+                        <div class="footer__block-data">
+                            <div class="footer__data footer__block-tel">
+                                <img src="./assets/img/call.svg" alt="icon">
+                                <div class="footer__block-call">
+                                    <a class="footer__text" href="tel:+73412321013">+7 (3412) 321013,</a>
+                                    <a class="footer__text" href="tel:+79658421013">+7 (965) 8421013</a>
+                                </div>
+                            </div>
+                            <div class="footer__data footer__block-email">
+                                <img class="footer__imagek-email" src="./assets/img/email.svg" alt="icon">
+                                <a class="footer__text footer__link-email" href="mailto:hanigift@gmai.com"
+                                    type="e-mail">hanigift@gmai.com</a>
+                            </div>
+                            <div class="footer__data footer__block-addres">
+                                <img class="footer__block-image__addres" src="./assets/img/home.svg" alt="icon">
+                                <p class="footer__text footer__block-paragraph__addres">г. Ижевск, ул. Автозаводская, 7,
+                                    корп. 6</p>
+                            </div>
+                            <div class="footer__block-icons">
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/tiktok.svg" alt="tictok">
+                                </a>
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/telegram.svg" alt="telegram">
+                                </a>
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/vk.svg" alt="vk">
+                                </a>
                             </div>
                         </div>
-                        <div class="footer__data footer__block-email">
-                            <img class="footer__imagek-email" src="./assets/img/email.svg" alt="icon">
-                            <a class="footer__text footer__link-email" href="mailto:hanigift@gmai.com"
-                                type="e-mail">hanigift@gmai.com</a>
+                        <div class="footer__block-buyer">
+                            <h3 class="footer__subtitle">Для покупателей</h3>
+                            <div class="footer__block-icons footer__block-icons__min_width">
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/tiktok.svg" alt="tictok">
+                                </a>
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/telegram.svg" alt="telegram">
+                                </a>
+                                <a class="footer__link-icon" href="#">
+                                    <img class="footer__image-icon" src="./assets/img/vk.svg" alt="vk">
+                                </a>
+                            </div>
+                            <ul class="footer__lists">
+                                <li>
+                                    <a class="footer__list-link" href="#">Таблица размеров</a>
+                                </li>
+                                <li>
+                                    <a class=" footer__list-link" href="#">Оплата и доставка</a>
+                                </li>
+                                <li>
+                                    <a class="footer__list-link" href="#">Оптовикам</a>
+                                </li>
+                                <li>
+                                    <a class=" footer__list-link" href="#">О компании</a>
+                                </li>
+                                <li>
+                                    <a class="footer__list-link" href="#">Новости</a>
+                                </li>
+                                <li>
+                                    <a class=" footer__list-link" href="#">Контакты</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="footer__data footer__block-addres">
-                            <img class="footer__block-image__addres" src="./assets/img/home.svg" alt="icon">
-                            <p class="footer__text footer__block-paragraph__addres">г. Ижевск, ул. Автозаводская, 7,
-                                корп. 6</p>
-                        </div>
-                        <div class="footer__block-icons">
-                            <a class="footer__link-icon" href="#">
-                                <img class="footer__image-icon" src="./assets/img/tiktok.svg" alt="tictok">
-                            </a>
-                            <a class="footer__link-icon" href="#">
-                                <img class="footer__image-icon" src="./assets/img/telegram.svg" alt="telegram">
-                            </a>
-                            <a class="footer__link-icon" href="#">
-                                <img class="footer__image-icon" src="./assets/img/vk.svg" alt="vk">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer__block-buyer">
-                        <h3 class="footer__subtitle">Для покупателей</h3>
-                        <ul class="footer__lists">
-                            <li>
-                                <a class="footer__list-link" href="#">Таблица размеров</a>
-                            </li>
-                            <li>
-                                <a class=" footer__list-link" href="#">Оплата и доставка</a>
-                            </li>
-                            <li>
-                                <a class="footer__list-link" href="#">Оптовикам</a>
-                            </li>
-                            <li>
-                                <a class=" footer__list-link" href="#">О компании</a>
-                            </li>
-                            <li>
-                                <a class="footer__list-link" href="#">Новости</a>
-                            </li>
-                            <li>
-                                <a class=" footer__list-link" href="#">Контакты</a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="footer__copiryting">
@@ -681,6 +813,7 @@
                 </form>
             </div>
         </div>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./assets/js/script.js"></script>
     </div>
 </body>

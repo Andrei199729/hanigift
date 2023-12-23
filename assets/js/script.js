@@ -2,8 +2,10 @@ const mainBannerBurger = document.querySelector(
   ".main__banner-catalog__burger"
 );
 
+const mainBannerBurgerHeader = document.querySelector(".header__menu-burger");
+
 const menuItemsList = document.querySelectorAll(".menu-items__hover");
-const menuTwoLevel = document.querySelector(".menu-items__two");
+const menuTwoLevel = document.querySelector(".menu-items__two-container");
 
 const sliderLine = document.querySelector(".hits__slider-line");
 const nextBtn = document.querySelector(".hits__slider-slider__next");
@@ -40,6 +42,12 @@ mainBannerBurger.addEventListener("click", function () {
   document.querySelector(".menu-items").classList.toggle("active");
 });
 
+mainBannerBurgerHeader.addEventListener("click", function () {
+  document
+    .querySelector(".header__lists-menu__burger")
+    .classList.toggle("active");
+});
+
 // открытие второго меню при наведении
 menuItemsList.forEach((item) => {
   item.addEventListener("mouseover", function () {
@@ -61,31 +69,95 @@ menuTwoLevel.addEventListener("mouseout", function () {
 });
 
 // slider
-function sliderNext(sliderLine, width) {
-  const blockReviwe = sliderLineReviwe ? 140 : 0;
 
-  offset = offset + width;
-  if (offset > width) {
-    offset = 0;
-  }
-  sliderLine.style.left = -offset + blockReviwe + "px";
-}
+const swiper = new Swiper(".hits__container-slider", {
+  // Настройки Swiper здесь
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 0,
+    },
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 0,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 0,
+    },
+    1219: {
+      slidesPerView: 4,
+      spaceBetween: 0,
+    },
+  },
+  navigation: {
+    nextEl: ".hits__slider-slider__next",
+    prevEl: ".hits__slider-slider__prev",
+  },
+});
 
-function sliderPrev(sliderLine, width) {
-  offset = offset - width;
-  const blockReviwe = sliderLineReviwe ? 140 : 0;
-  if (offset < 0) {
-    offset = width;
-  }
-  sliderLine.style.left = -offset + blockReviwe + "px";
-}
+const swiperReview = new Swiper(".reviews__slider", {
+  // Настройки Swiper здесь
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: true,
+  navigation: {
+    nextEl: ".reviews__slider-btn__next",
+    prevEl: ".reviews__slider-btn__prev",
+  },
+});
 
-nextBtn.addEventListener("click", () => sliderNext(sliderLine, wigthHits));
-prevBtn.addEventListener("click", () => sliderPrev(sliderLine, wigthHits));
+const swiperRecentlyPurchased = new Swiper(".recently-purchased__slider", {
+  // Настройки Swiper здесь
+  slidesPerView: 4,
+  spaceBetween: 48,
+  loop: true,
+  breakpoints: {
+    324: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
 
-nextBtnReviwe.addEventListener("click", () =>
-  sliderNext(sliderLineReviwe, wigthReviwe)
-);
-prevBtnReviwe.addEventListener("click", () =>
-  sliderPrev(sliderLineReviwe, wigthReviwe)
-);
+    375: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+
+    500: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 48,
+    },
+
+    840: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+
+    1110: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+
+    1140: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 48,
+    },
+  },
+  navigation: {
+    nextEl: ".recently-purchased__slider-slider__next",
+    prevEl: ".recently-purchased__slider-slider__prev",
+  },
+});
