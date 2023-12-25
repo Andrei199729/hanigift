@@ -19,17 +19,36 @@ const prevBtnReviwe = document.querySelector(".reviews__slider-btn__prev");
 const btnCall = document.querySelector(".main__banner-telephon__btn");
 const btnClose = document.querySelector(".popup__btn-close");
 const popupCall = document.querySelector(".popup__request-call");
+const modalBg = document.querySelector(".modal-bg");
 
 let offset = 0;
 const wigthHits = 193;
 const wigthReviwe = 945;
 
+function closeModal() {
+  popupCall.classList.remove("popup__request-call_opened");
+  modalBg.style.display = "none";
+}
+
+function closeModalOnEsc(event) {
+  if (event.key === "Escape") {
+    console.log(event.key);
+    closeModal();
+  }
+}
+
 btnCall.addEventListener("click", function (e) {
   popupCall.classList.add("popup__request-call_opened");
+  modalBg.style.display = "block";
+  document.addEventListener("keydown", closeModalOnEsc);
 });
 
 btnClose.addEventListener("click", function (e) {
-  popupCall.classList.remove("popup__request-call_opened");
+  closeModal();
+});
+
+modalBg.addEventListener("click", function (e) {
+  closeModal();
 });
 
 // при подгрузке убираем блок
@@ -39,7 +58,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
 // для переключения активного класса и показа/скрытия меню
 mainBannerBurger.addEventListener("click", function () {
-  document.querySelector(".menu-items").classList.toggle("active");
+  document.querySelector(".menu__container").classList.toggle("active");
 });
 
 mainBannerBurgerHeader.addEventListener("click", function () {
