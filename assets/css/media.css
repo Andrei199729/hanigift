@@ -1,3 +1,20 @@
+@media screen and (max-width: 1440px) {
+  .gifts-for-men__block-product__maket {
+    padding: 16px;
+    max-width: 329px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gifts-for-men__block-product__gift {
+    max-width: 659px;
+  }
+
+  .gifts-for-men__block-product__granata {
+    max-width: 298px;
+  }
+}
+
 @media screen and (max-width: 1360px) {
   .header__container {
     padding: 19px 100px;
@@ -136,102 +153,113 @@
   .footer__block-box {
     gap: 125px;
   }
+
+  .gifts-for-men {
+    padding: 48px 100px 127px;
+  }
 }
 
 @media screen and (max-width: 1220px) {
   .header__container {
     padding: 19px 65px;
+
+    .form__search-input {
+      max-width: 50px;
+    }
+
+    .main__banner-logo {
+      max-width: 400px;
+      margin: 48px 0 48px 65px;
+    }
+
+    .main__banner-catalog {
+      padding: 16px 65px;
+    }
+
+    .main__banner-telephon__btn {
+      margin-right: 140px;
+    }
+
+    .hits {
+      padding-bottom: 80px;
+      overflow: hidden;
+    }
+
+    .hits__container-lists {
+      padding: 64px 65px;
+    }
+
+    .hits__image {
+      top: 85px;
+      right: 10px;
+    }
+
+    .info__container {
+      gap: 80px;
+      padding: 48px 65px 72px;
+    }
+
+    .hits__container-slid {
+      max-width: 386px;
+      background-size: 100% auto;
+    }
+
+    /* population */
+
+    .population {
+      padding: 80px 65px 102px;
+    }
+
+    .population__block-paragraph__name_ak {
+      max-width: 100%;
+    }
+
+    .population__block-image__knife {
+      top: 74px;
+    }
+
+    .population__block-image__pencile {
+      max-width: 200px;
+      top: 40px;
+    }
+
+    /* gallery */
+
+    .gallery__container {
+      padding: 70px 65px 100px;
+    }
+
+    .reviews__container {
+      padding: 64px 65px;
+    }
+
+    .recently-purchased {
+      padding: 50px 65px 60px;
+    }
+
+    .clients {
+      padding: 64px 65px;
+    }
+
+    .clients__services-block {
+      gap: 34px;
+      align-items: center;
+    }
+
+    .footer__block {
+      gap: 65px;
+    }
+
+    .footer__block-box {
+      gap: 65px;
+    }
+  }
+  .gifts-for-men {
+    padding: 48px 65px 127px;
   }
 
-  .form__search-input {
-    max-width: 50px;
-  }
-
-  .main__banner-logo {
+  .gifts-for-men__block-product__gift {
     max-width: 400px;
-    margin: 48px 0 48px 65px;
-  }
-
-  .main__banner-catalog {
-    padding: 16px 65px;
-  }
-
-  .main__banner-telephon__btn {
-    margin-right: 140px;
-  }
-
-  .hits {
-    padding-bottom: 80px;
-    overflow: hidden;
-  }
-
-  .hits__container-lists {
-    padding: 64px 65px;
-  }
-
-  .hits__image {
-    top: 85px;
-    right: 10px;
-  }
-
-  .info__container {
-    gap: 80px;
-    padding: 48px 65px 72px;
-  }
-
-  .hits__container-slid {
-    max-width: 386px;
-    background-size: 100% auto;
-  }
-
-  /* population */
-
-  .population {
-    padding: 80px 65px 102px;
-  }
-
-  .population__block-paragraph__name_ak {
-    max-width: 100%;
-  }
-
-  .population__block-image__knife {
-    top: 74px;
-  }
-
-  .population__block-image__pencile {
-    max-width: 200px;
-    top: 40px;
-  }
-
-  /* gallery */
-
-  .gallery__container {
-    padding: 70px 65px 100px;
-  }
-
-  .reviews__container {
-    padding: 64px 65px;
-  }
-
-  .recently-purchased {
-    padding: 50px 65px 60px;
-  }
-
-  .clients {
-    padding: 64px 65px;
-  }
-
-  .clients__services-block {
-    gap: 34px;
-    align-items: center;
-  }
-
-  .footer__block {
-    gap: 65px;
-  }
-
-  .footer__block-box {
-    gap: 65px;
   }
 }
 
@@ -343,6 +371,10 @@
     overflow: hidden;
   }
 
+  .recently-purchased__slider-container__line-category {
+    overflow: visible;
+  }
+
   .recently-purchased__slider-articale {
     width: 280px;
   }
@@ -379,6 +411,38 @@
 
   .footer__block-box {
     gap: 60px;
+  }
+
+  .gifts-for-men {
+    padding: 48px 50px 127px;
+  }
+
+  .gifts-for-men__block_granata-makets {
+    flex-direction: column;
+  }
+
+  .gifts-for-men__block_granata {
+    flex-direction: row;
+  }
+
+  .gifts-for-men__block {
+    padding: 36px;
+  }
+
+  .gifts-for-men__subtitle {
+    margin: 0;
+  }
+
+  .gifts-for-men__block-box {
+    align-self: center;
+  }
+
+  .gifts-for-men__subtitle {
+    margin-bottom: 12px;
+  }
+
+  .gifts-for-men__block-product__granata {
+    max-width: 293px;
   }
 }
 
@@ -583,6 +647,52 @@
 
   .footer__block-box {
     gap: 90px;
+  }
+
+  .gifts-for-men {
+    padding: 48px 30px 127px;
+  }
+
+  .gifts-for-men__subtitle-maket {
+    margin-bottom: 12px;
+  }
+
+  .gifts-for-men__block {
+    padding: 36px;
+  }
+
+  .gifts-for-men__block-product__granata {
+    max-width: 53%;
+  }
+
+  .gifts-for-men__block-product {
+    flex-direction: column-reverse;
+    max-height: max-content;
+  }
+
+  .gifts-for-men__block-product__makets {
+    flex-direction: row;
+  }
+
+  .gifts-for-men__block_granata {
+    flex-direction: row;
+  }
+
+  .gifts-for-men__block_granata-makets {
+    flex-direction: column;
+  }
+
+  .gifts-for-men__block-product__makets_display {
+    display: none;
+  }
+
+  .gifts-for-men__block-product__gift,
+  .gifts-for-men__block-product__maket {
+    max-width: 100%;
+  }
+
+  .gifts-for-men__image-granata {
+    align-self: center;
   }
 }
 
@@ -1055,6 +1165,10 @@
     justify-content: start;
     gap: 0;
   }
+
+  .gifts-for-men__block-product__granata {
+    max-width: 45%;
+  }
 }
 
 @media screen and (max-width: 668px) {
@@ -1266,6 +1380,26 @@
 
   .gallery__container {
     padding: 24px 12px 40px;
+  }
+
+  .gifts-for-men__block-product__gift,
+  .gifts-for-men__block-product__granata {
+    display: none;
+    max-width: none;
+  }
+
+  .gifts-for-men__block-product__makets {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .gifts-for-men__box-maket {
+    align-items: center;
+  }
+
+  .gifts-for-men__block-box,
+  .gifts-for-men__paragraph-maket {
+    align-self: start;
   }
 }
 
@@ -1500,6 +1634,10 @@
 
   .reviews__container {
     padding: 24px 12px 32px;
+  }
+
+  .recently-purchased__block-slider {
+    padding: 0;
   }
 
   /* reviews__slider */
