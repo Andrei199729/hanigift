@@ -1083,6 +1083,23 @@
   .popup {
     width: 410px;
   }
+
+  .gifts-for-men {
+    padding: 40px 16px 68px;
+  }
+
+  .gifts-for-men__block {
+    padding: 44px;
+  }
+
+  .gifts-for-men____blocks {
+    gap: 32px;
+  }
+
+  .gifts-for-men__block-product,
+  .gifts-for-men__block-product__makets {
+    gap: 16px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1777,6 +1794,25 @@
 
   .footer__copiryting {
     margin-top: 32px;
+  }
+
+  .gifts-for-men {
+    padding: 24px 12px;
+  }
+
+  .gifts-for-men__block {
+    padding: 24px;
+  }
+
+  .gifts-for-men__block-product,
+  .gifts-for-men__block-product__makets {
+    gap: 12px;
+  }
+
+  .gifts-for-men__title {
+    margin-bottom: 16px;
+    font-size: 36px;
+    line-height: 40px;
   }
 }
 
