@@ -13,6 +13,27 @@
   .gifts-for-men__block-product__granata {
     max-width: 298px;
   }
+
+  .gifts-februry__box {
+    justify-content: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1440px) {
+  .gifts-februry__box {
+    grid-template-columns: repeat(auto-fit, minmax(313px, 1fr));
+    justify-content: space-between;
+  }
+
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1360px) {
@@ -157,103 +178,113 @@
   .gifts-for-men {
     padding: 48px 100px 127px;
   }
+
+  .gifts-februry__box {
+    grid-template-columns: repeat(auto-fit, minmax(308px, 0fr));
+    justify-content: space-between;
+  }
+
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1220px) {
   .header__container {
     padding: 19px 65px;
-
-    .form__search-input {
-      max-width: 50px;
-    }
-
-    .main__banner-logo {
-      max-width: 400px;
-      margin: 48px 0 48px 65px;
-    }
-
-    .main__banner-catalog {
-      padding: 16px 65px;
-    }
-
-    .main__banner-telephon__btn {
-      margin-right: 140px;
-    }
-
-    .hits {
-      padding-bottom: 80px;
-      overflow: hidden;
-    }
-
-    .hits__container-lists {
-      padding: 64px 65px;
-    }
-
-    .hits__image {
-      top: 85px;
-      right: 10px;
-    }
-
-    .info__container {
-      gap: 80px;
-      padding: 48px 65px 72px;
-    }
-
-    .hits__container-slid {
-      max-width: 386px;
-      background-size: 100% auto;
-    }
-
-    /* population */
-
-    .population {
-      padding: 80px 65px 102px;
-    }
-
-    .population__block-paragraph__name_ak {
-      max-width: 100%;
-    }
-
-    .population__block-image__knife {
-      top: 74px;
-    }
-
-    .population__block-image__pencile {
-      max-width: 200px;
-      top: 40px;
-    }
-
-    /* gallery */
-
-    .gallery__container {
-      padding: 70px 65px 100px;
-    }
-
-    .reviews__container {
-      padding: 64px 65px;
-    }
-
-    .recently-purchased {
-      padding: 50px 65px 60px;
-    }
-
-    .clients {
-      padding: 64px 65px;
-    }
-
-    .clients__services-block {
-      gap: 34px;
-      align-items: center;
-    }
-
-    .footer__block {
-      gap: 65px;
-    }
-
-    .footer__block-box {
-      gap: 65px;
-    }
   }
+  .form__search-input {
+    max-width: 50px;
+  }
+
+  .main__banner-logo {
+    max-width: 400px;
+    margin: 48px 0 48px 65px;
+  }
+
+  .main__banner-catalog {
+    padding: 16px 65px;
+  }
+
+  .main__banner-telephon__btn {
+    margin-right: 140px;
+  }
+
+  .hits {
+    padding-bottom: 80px;
+    overflow: hidden;
+  }
+
+  .hits__container-lists {
+    padding: 64px 65px;
+  }
+
+  .hits__image {
+    top: 85px;
+    right: 10px;
+  }
+
+  .info__container {
+    gap: 80px;
+    padding: 48px 65px 72px;
+  }
+
+  .hits__container-slid {
+    max-width: 386px;
+    background-size: 100% auto;
+  }
+
+  /* population */
+
+  .population {
+    padding: 80px 65px 102px;
+  }
+
+  .population__block-paragraph__name_ak {
+    max-width: 100%;
+  }
+
+  .population__block-image__knife {
+    top: 74px;
+  }
+
+  .population__block-image__pencile {
+    max-width: 200px;
+    top: 40px;
+  }
+
+  /* gallery */
+
+  .gallery__container {
+    padding: 70px 65px 100px;
+  }
+
+  .reviews__container {
+    padding: 64px 65px;
+  }
+
+  .recently-purchased {
+    padding: 50px 65px 60px;
+  }
+
+  .clients {
+    padding: 64px 65px;
+  }
+
+  .clients__services-block {
+    gap: 34px;
+    align-items: center;
+  }
+
+  .footer__block {
+    gap: 65px;
+  }
+
+  .footer__block-box {
+    gap: 65px;
+  }
+
   .gifts-for-men {
     padding: 48px 65px 127px;
   }
@@ -261,11 +292,33 @@
   .gifts-for-men__block-product__gift {
     max-width: 400px;
   }
+
+  .gifts-februry__box {
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    justify-content: space-between;
+  }
+
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gift-element__slider-btn__next {
+    left: 25px;
+  }
+
+  .gift-element__slider-btn__prev {
+    right: 25px;
+  }
 }
 
 @media screen and (max-width: 1140px) {
   .header__container {
     padding: 19px 50px;
+  }
+
+  .header__lists {
+    gap: 25px;
   }
 
   .header__box-search {
@@ -444,6 +497,20 @@
   .gifts-for-men__block-product__granata {
     max-width: 293px;
   }
+
+  .gifts-februry__box {
+    grid-template-columns: repeat(auto-fit, minmax(184px, 0fr));
+    justify-content: space-between;
+  }
+
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .element__title {
+    max-width: 75%;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -452,7 +519,8 @@
   }
 
   .header__lists {
-    gap: 25px;
+    gap: 19px;
+    margin-right: 10px;
   }
 
   .form__search-input {
@@ -693,6 +761,29 @@
 
   .gifts-for-men__image-granata {
     align-self: center;
+  }
+
+  .gifts-februry__box {
+    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
+    justify-content: space-between;
+  }
+
+  .article__box {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gifts-februry_title {
+    margin-right: 20px;
+  }
+
+  .gifts-februry__paragraph {
+    width: 124px;
+  }
+
+  .gift-element__slider-btn__next,
+  .gift-element__slider-btn__prev {
+    display: none;
   }
 }
 
@@ -1092,13 +1183,35 @@
     padding: 44px;
   }
 
-  .gifts-for-men____blocks {
+  .gifts-for-men__blocks {
     gap: 32px;
   }
 
   .gifts-for-men__block-product,
   .gifts-for-men__block-product__makets {
     gap: 16px;
+  }
+
+  .article__box,
+  .image_card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gift-element__slider-block {
+    padding: 37px 42px 51px 46px;
+  }
+
+  .gifts-element__blocks {
+    gap: 24px;
+  }
+
+  .gifts-element__paragraph {
+    margin: 0;
+  }
+
+  .gifts-element {
+    padding-bottom: 64px;
   }
 }
 
@@ -1117,6 +1230,10 @@
 
   .menu-items__two-container {
     left: 409px;
+  }
+
+  .gifts-februry_title {
+    margin-right: 0;
   }
 }
 
@@ -1185,6 +1302,10 @@
 
   .gifts-for-men__block-product__granata {
     max-width: 45%;
+  }
+
+  .gifts-februry_title {
+    max-width: 290px;
   }
 }
 
@@ -1418,6 +1539,14 @@
   .gifts-for-men__paragraph-maket {
     align-self: start;
   }
+
+  .page__path_element {
+    display: none;
+  }
+
+  .element__title {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1485,6 +1614,28 @@
 
   .footer__block-buyer {
     max-width: 220px;
+  }
+
+  .gifts-februry__block {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .gifts-februry_title {
+    margin: 0;
+  }
+
+  .gifts-februry__paragraph {
+    width: 92px;
+  }
+
+  .gifts-februry__block {
+    align-items: start;
+  }
+
+  .gifts-februry__filters {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 
@@ -1680,7 +1831,7 @@
   /* recently */
 
   .recently-purchased {
-    padding: 24px 12px 32px;
+    padding: 40px 12px 24px;
   }
 
   .recently-purchased__block-slider__title {
@@ -1700,7 +1851,7 @@
   }
 
   .recently-purchased__slider-image__card {
-    max-width: 360;
+    max-width: 100%;
     width: 100%;
     height: auto;
   }
@@ -1800,6 +1951,10 @@
     padding: 24px 12px;
   }
 
+  .gifts-februry {
+    padding-bottom: 40px;
+  }
+
   .gifts-for-men__block {
     padding: 24px;
   }
@@ -1813,6 +1968,73 @@
     margin-bottom: 16px;
     font-size: 36px;
     line-height: 40px;
+  }
+
+  .article__box,
+  .image_card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gifts-februry_title {
+    max-width: 100%;
+    margin: 0;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .gifts-februry__box {
+    gap: 16px;
+  }
+
+  .gift-element__price_style {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .gift-element__slider-block {
+    border: none;
+  }
+
+  .gift-element__slider-container__line {
+    right: 35px;
+  }
+
+  .recently-purchased__block-btn__box {
+    gap: 0;
+    justify-content: end;
+  }
+
+  .gift-element-slider__title {
+    max-width: 100%;
+  }
+
+  .gifts-element {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .element__title {
+    margin: 0 auto 16px;
+  }
+
+  .gifts-element__blocks {
+    gap: 0;
+  }
+
+  .logo__catalog {
+    display: none;
+  }
+
+  .main__banner-telephons__block {
+    flex-direction: row;
+    gap: 18px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .page__path-februry {
+    display: none;
   }
 }
 
@@ -2137,7 +2359,7 @@
   }
 
   .recently-purchased__slider-image__card {
-    max-width: 250px;
+    max-width: 100%;
     width: 100%;
     height: auto;
   }
@@ -2235,5 +2457,11 @@
 
   .popup {
     width: 328px;
+  }
+
+  .article__box,
+  .image_card {
+    max-width: 100%;
+    width: 100%;
   }
 }

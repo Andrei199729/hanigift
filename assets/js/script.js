@@ -132,7 +132,6 @@ let ready = () => {
   });
 
   const swiperReview = new Swiper(".reviews__slider", {
-    // Настройки Swiper здесь
     slidesPerView: 1,
     spaceBetween: 0,
     loop: true,
@@ -193,5 +192,52 @@ let ready = () => {
       prevEl: ".recently-purchased__slider-slider__prev",
     },
   });
+
+  const swiperElement = new Swiper(".gift-element__slider-block__images", {
+    slidesPerView: 2.5,
+    spaceBetween: 16,
+    loop: true,
+    navigation: {
+      nextEl: ".gift-element__slider-btn__next",
+      prevEl: ".gift-element__slider-btn__prev",
+    },
+  });
+
+  // счётчик
+
+  const countText = document.querySelector(".element__counter");
+  const countTextPrice = document.querySelector(".gift-element__price");
+  const btns = document.querySelectorAll(".element__btn");
+
+  let counter = 1;
+  let price = 2800;
+  let priceAdd = 2800;
+
+  console.log(price);
+  btns.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      if (index === 0 && counter > 1) {
+        counter--;
+        price = price - priceAdd;
+      } else if (index === 1) {
+        counter++;
+        price = price + priceAdd;
+      }
+      countText.textContent = counter;
+      countTextPrice.textContent = price;
+      setDisabled(counter);
+    });
+  });
+
+  function setDisabled(count) {
+    if (count === 1) {
+      btns[0].disabled = true;
+    } else if (count === 99) {
+      btns[1].disabled = true;
+    } else {
+      btns[0].disabled = false;
+      btns[1].disabled = false;
+    }
+  }
 };
 document.addEventListener("DOMContentLoaded", ready);
