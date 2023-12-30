@@ -8,19 +8,14 @@ let ready = () => {
   const menuItemsList = document.querySelectorAll(".menu-items__hover");
   const menuTwoLevel = document.querySelector(".menu-items__two-container");
 
-  const sliderLine = document.querySelector(".hits__slider-line");
-  const nextBtn = document.querySelector(".hits__slider-slider__next");
-  const prevBtn = document.querySelector(".hits__slider-slider__prev");
-  const sliderLineReviwe = document.querySelector(
-    ".reviews__slider-container__line"
-  );
-  const nextBtnReviwe = document.querySelector(".reviews__slider-btn__next");
-  const prevBtnReviwe = document.querySelector(".reviews__slider-btn__prev");
-
   const btnCall = document.querySelector(".main__banner-telephon__btn");
   const btnClose = document.querySelector(".popup__btn-close");
   const popupCall = document.querySelector(".popup__request-call");
   const modalBg = document.querySelector(".modal-bg");
+
+  const btnCheckAll = document.querySelector(".basket__checkbox-input__all");
+  const btnInputAll = document.querySelectorAll(".basket__checkbox-input");
+  const deleteSelected = document.querySelector(".basket__btn-delete");
 
   function closeModal() {
     popupCall.classList.remove("popup__request-call_opened");
@@ -205,39 +200,72 @@ let ready = () => {
 
   // счётчик
 
-  const countText = document.querySelector(".element__counter");
-  const countTextPrice = document.querySelector(".gift-element__price");
-  const btns = document.querySelectorAll(".element__btn");
+  // Получаем все нужные элементы
+  const elements = document.querySelectorAll(".element__counter");
+  const prices = document.querySelectorAll(".gift-element__price");
+  const btnContainers = document.querySelectorAll(".gift-element__counter");
 
-  let counter = 1;
-  let price = 2800;
-  let priceAdd = 2800;
+  // Для каждого элемента выполняем одни и те же операции
+  elements.forEach((countText, index) => {
+    const countTextPrice = prices[index];
+    const btns = btnContainers[index].querySelectorAll(".element__btn");
 
-  console.log(price);
-  btns.forEach((btn, index) => {
-    btn.addEventListener("click", () => {
-      if (index === 0 && counter > 1) {
-        counter--;
-        price = price - priceAdd;
-      } else if (index === 1) {
-        counter++;
-        price = price + priceAdd;
+    let counter = 1;
+    let price = 2800;
+    let priceAdd = 2800;
+
+    btns.forEach((btn, btnIndex) => {
+      btn.addEventListener("click", (event) => {
+        if (event.currentTarget) {
+          if (btnIndex === 0 && counter > 1) {
+            counter--;
+            price = price - priceAdd;
+          } else if (btnIndex === 1) {
+            counter++;
+            price = price + priceAdd;
+          }
+          countText.textContent = counter;
+          countTextPrice.textContent = price;
+          setDisabled(counter, btns);
+        }
+      });
+    });
+
+    function setDisabled(count, buttons) {
+      if (count === 1) {
+        buttons[0].disabled = true;
+      } else if (count === 99) {
+        buttons[1].disabled = true;
+      } else {
+        buttons[0].disabled = false;
+        buttons[1].disabled = false;
       }
-      countText.textContent = counter;
-      countTextPrice.textContent = price;
-      setDisabled(counter);
+    }
+    window.addEventListener("DOMContentLoaded", function () {
+      setDisabled(1, btns);
     });
   });
 
-  function setDisabled(count) {
-    if (count === 1) {
-      btns[0].disabled = true;
-    } else if (count === 99) {
-      btns[1].disabled = true;
-    } else {
-      btns[0].disabled = false;
-      btns[1].disabled = false;
-    }
+  // выбрать все
+  function checkAll() {
+    btnInputAll.forEach((checkbox) => {
+      if (checkbox !== btnCheckAll) {
+        checkbox.checked = btnCheckAll.checked;
+      }
+    });
   }
+
+  function deleteSelectedAll() {
+    btnInputAll.forEach((checkbox) => {
+      if (checkbox.checked && checkbox !== btnCheckAll) {
+        checkbox.parentElement.remove(); // Удаление родительского элемента, содержащего чекбокс
+      }
+    });
+  }
+
+  btnCheckAll.addEventListener("click", checkAll);
+
+  // удалить выбранные
+  deleteSelected.addEventListener("click", deleteSelectedAll);
 };
 document.addEventListener("DOMContentLoaded", ready);

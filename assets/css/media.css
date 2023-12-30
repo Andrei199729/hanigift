@@ -22,6 +22,16 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .favorites__container {
+    display: flex;
+    justify-content: stretch;
+    gap: 48px;
+  }
+
+  .favorites__container-without__elements {
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1360px) and (max-width: 1440px) {
@@ -189,6 +199,11 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 1230px) {
+  .basket__article-container {
+    gap: 24px;
+  }
+}
 
 @media screen and (max-width: 1220px) {
   .header__container {
@@ -309,6 +324,10 @@
 
   .gift-element__slider-btn__prev {
     right: 25px;
+  }
+
+  .basket__article {
+    padding: 19px;
   }
 }
 
@@ -510,6 +529,17 @@
 
   .element__title {
     max-width: 75%;
+  }
+
+  .basket__block-elements {
+    flex-direction: column;
+  }
+
+  .basket__article-container {
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -784,6 +814,20 @@
   .gift-element__slider-btn__next,
   .gift-element__slider-btn__prev {
     display: none;
+  }
+
+  .favorites__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .favorites__articale {
+    width: 46%;
+  }
+
+  .favorites__container-without__elements {
+    justify-content: center;
   }
 }
 
@@ -1250,6 +1294,14 @@
     left: 373px;
     width: calc(42vw + 26px);
   }
+
+  .favorites__articale {
+    width: 46%;
+  }
+  .basket__article-container {
+    justify-content: stretch;
+    gap: 20px;
+  }
 }
 
 @media screen and (max-width: 724px) {
@@ -1547,6 +1599,18 @@
   .element__title {
     max-width: 100%;
   }
+
+  .favorites__articale {
+    width: 45%;
+  }
+
+  .basket__article-block {
+    gap: 15px;
+  }
+
+  .gift-element__counter-price__container {
+    gap: 22px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1636,6 +1700,26 @@
   .gifts-februry__filters {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .favorites__articale {
+    width: 100%;
+  }
+
+  .favorites__image {
+    width: 100%;
+  }
+
+  .basket__article-container {
+    flex-direction: column;
+  }
+
+  .basket__article_price-container {
+    justify-content: space-between;
+  }
+
+  .basket__article_price-box {
+    align-self: center;
   }
 }
 
@@ -2029,6 +2113,18 @@
   .main__banner-telephons__block {
     flex-direction: row;
     gap: 18px;
+  }
+
+  .favorites__articale,
+  .favorites__image {
+    width: 100%;
+  }
+
+  .basket__article_price {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
   }
 }
 
@@ -2462,6 +2558,11 @@
   .article__box,
   .image_card {
     max-width: 100%;
+    width: 100%;
+  }
+
+  .favorites__articale,
+  .favorites__image {
     width: 100%;
   }
 }
