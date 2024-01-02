@@ -44,6 +44,14 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .personal__area-block__box-delivery-point__text {
+    flex-direction: column;
+  }
+
+  .personal__area-history__paragraph-state {
+    max-width: fit-content;
+  }
 }
 
 @media screen and (max-width: 1360px) {
@@ -198,7 +206,16 @@
     max-width: 100%;
     width: 100%;
   }
+
+  .personal__area-block__box-delivery-point__text {
+    flex-direction: column;
+  }
+
+  .personal__area-history__paragraph-state {
+    max-width: fit-content;
+  }
 }
+
 @media screen and (max-width: 1230px) {
   .basket__article-container {
     gap: 24px;
@@ -829,6 +846,37 @@
   .favorites__container-without__elements {
     justify-content: center;
   }
+
+  .reviews-clients__box {
+    justify-content: stretch;
+    gap: 16px;
+    align-items: stretch;
+    margin-bottom: 32px;
+  }
+
+  .reviews-clients__title {
+    text-align: start;
+  }
+
+  .reviews-clients__btn {
+    margin-top: 8px;
+  }
+
+  .reviews-clients__article {
+    padding: 20px 24px;
+  }
+
+  .reviews-clients__paragraph {
+    max-width: 100%;
+  }
+
+  .auth__btn {
+    margin: 0;
+  }
+
+  .personal__area-history__container {
+    margin-bottom: 12px;
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -889,6 +937,14 @@
 
   .reviews__slider-article {
     padding: 0 114px;
+  }
+
+  .reviews-clients__article {
+    padding: 20px 24px;
+  }
+
+  .reviews-clients__paragraph {
+    max-width: 100%;
   }
 }
 
@@ -1257,6 +1313,36 @@
   .gifts-element {
     padding-bottom: 64px;
   }
+
+  .reviews-clients__article {
+    padding: 20px 24px;
+  }
+
+  .reviews-clients__paragraph {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .auth__input {
+    padding: 12px;
+  }
+
+  .gifts-for-men__title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  .personal__area-block__box {
+    flex-direction: column;
+  }
+
+  .personal__area-block__box-delivery-point__text {
+    flex-direction: row;
+  }
+
+  .personal__area-history-element__container {
+    margin-bottom: 6px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -1611,6 +1697,19 @@
   .gift-element__counter-price__container {
     gap: 22px;
   }
+
+  .reviews-clients__box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviews-clients__btn {
+    margin-top: 0;
+  }
+
+  .reviews-clients__title {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1720,6 +1819,41 @@
 
   .basket__article_price-box {
     align-self: center;
+  }
+
+  .personal__area-history__block {
+    gap: 40px;
+  }
+
+  .personal__area-element {
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .personal__area-element__block {
+    gap: 8px;
+  }
+
+  .personal__area-element__paragraph {
+    max-width: 169px;
+  }
+
+  .personal__area-history__elements {
+    padding: 12px 12px 16px;
+  }
+
+  .personal__area-element {
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .personal__area-history__pages {
+    display: none;
+  }
+
+  .personal__area-history__container {
+    margin-bottom: 24px;
   }
 }
 
@@ -2126,11 +2260,113 @@
     font-weight: 700;
     letter-spacing: 0.2px;
   }
+
+  .reviews-clients__btn {
+    max-width: 100%;
+  }
+
+  .reviews-clients__title {
+    text-align: start;
+  }
+
+  .reviews-clients__article {
+    padding: 12px 12px;
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .reviews-clients__paragraph {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .reviews-clients__paragraph-name {
+    text-align: center;
+  }
+
+  .popup__reviews-clients {
+    display: none;
+  }
+
+  .modal-bg {
+    display: none;
+  }
+
+  .popup__container_reviews-clients {
+    display: none;
+    padding: 0;
+  }
+
+  .popup__block_reviews-clients {
+    margin-bottom: 28px;
+  }
+
+  .popup__form-fields {
+    gap: 8px;
+  }
+
+  .popup__form-box {
+    gap: 8px;
+    margin-top: 8px;
+  }
+
+  .popup__stars {
+    margin-bottom: 4px;
+  }
+
+  .clients__btn_reviews-clients {
+    margin: 16px 0 122px;
+  }
+
+  .auth__form {
+    margin-bottom: 365px;
+  }
+
+  .auth__input {
+    padding: 12px;
+  }
+
+  .personal-area-date {
+    overflow: scroll;
+  }
+
+  .personal__area-links {
+    width: 410px;
+  }
+
+  .personal-area-current__container {
+    margin-bottom: 248px;
+  }
+
+  .personal__area-element__paragraph {
+    max-width: 189px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .personal__area-element__paragraph-name {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .personal__area-element__paragraph-price {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .personal__area-history-element__container {
+    margin-bottom: 35px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .page__path-februry {
     display: none;
+  }
+
+  .personal__area-element__paragraph {
+    max-width: 160px;
   }
 }
 
@@ -2563,6 +2799,11 @@
 
   .favorites__articale,
   .favorites__image {
+    width: 100%;
+  }
+
+  .reviews-clients__paragraph {
+    max-width: 100%;
     width: 100%;
   }
 }

@@ -11,28 +11,78 @@ let ready = () => {
   const btnCall = document.querySelector(".main__banner-telephon__btn");
   const btnClose = document.querySelector(".popup__btn-close");
   const popupCall = document.querySelector(".popup__request-call");
+
+  const btnReviewsClients = document.querySelector(".reviews-clients__btn");
+  const popupReviewsClients = document.querySelector(".popup__reviews-clients");
+
   const modalBg = document.querySelector(".modal-bg");
 
   const btnCheckAll = document.querySelector(".basket__checkbox-input__all");
   const btnInputAll = document.querySelectorAll(".basket__checkbox-input");
   const deleteSelected = document.querySelector(".basket__btn-delete");
 
+  // страница профиля кнопки и инпут дизейбл, и изменяет текст
+  const personalAreaBtn = document.querySelectorAll(".personal__area-btn");
+  const personalAreaInput = document.querySelectorAll(".personal__area-input");
+  let isEditing = false;
+  // мобильная форма отзывов
+
+  const blockFormReviewsClients = document.querySelector(
+    ".popup__container_reviews-clients"
+  );
+
+  const blockReviewsClients = document.querySelector(
+    ".gifts-for-men__container"
+  );
+
+  // классы открытия попапов
+  const popupRequestCallOpened = "popup__request-call_opened";
+  const popupReviewsClientsOpened = "popup__reviews-clients_opened";
+
+  // массив объектов попапов
+  const arrOpened = [
+    { openedPopup: popupRequestCallOpened, popup: popupCall },
+    {
+      openedPopup: popupReviewsClientsOpened,
+      popup: popupReviewsClients,
+    },
+  ];
+
+  // закрытие отдельных попапов
   function closeModal() {
-    popupCall.classList.remove("popup__request-call_opened");
-    modalBg.style.display = "none";
+    arrOpened.forEach((opened) => {
+      opened.popup?.classList.remove(opened.openedPopup);
+      modalBg.style.display = "none";
+    });
+    blockFormReviewsClients.style.display = "none";
+    blockReviewsClients.style.display = "block";
   }
 
   function closeModalOnEsc(event) {
     if (event.key === "Escape") {
-      console.log(event.key);
       closeModal();
     }
   }
 
   if (btnCall) {
     btnCall.addEventListener("click", function (e) {
-      popupCall.classList.add("popup__request-call_opened");
+      popupCall.classList.add(popupRequestCallOpened);
       modalBg.style.display = "block";
+      document.addEventListener("keydown", closeModalOnEsc);
+    });
+  }
+
+  if (btnReviewsClients) {
+    btnReviewsClients.addEventListener("click", function (e) {
+      if (window.innerWidth > 500) {
+        popupReviewsClients.classList.add(popupReviewsClientsOpened);
+        modalBg.style.display = "block";
+      }
+      if (window.innerWidth <= 500) {
+        modalBg.style.display = "none";
+        blockFormReviewsClients.style.display = "block";
+        blockReviewsClients.style.display = "none";
+      }
       document.addEventListener("keydown", closeModalOnEsc);
     });
   }
@@ -183,10 +233,65 @@ let ready = () => {
       },
     },
     navigation: {
-      nextEl: ".recently-purchased__slider-slider__next",
-      prevEl: ".recently-purchased__slider-slider__prev",
+      nextEl: ".recently__slider-slider__next",
+      prevEl: ".recently__slider-slider__prev",
     },
   });
+
+  const swiperRecentlyPurchasedElement = new Swiper(
+    ".catalog-element__slider",
+    {
+      // Настройки Swiper здесь
+      slidesPerView: 4,
+      spaceBetween: 20,
+      loop: true,
+      breakpoints: {
+        324: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+
+        375: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+
+        500: {
+          slidesPerView: 2,
+          spaceBetween: 48,
+        },
+
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 48,
+        },
+
+        840: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+
+        1110: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+
+        1140: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 48,
+        },
+      },
+      navigation: {
+        nextEl: ".catalog-element__slider-slider__next",
+        prevEl: ".catalog-element__slider-slider__prev",
+      },
+    }
+  );
 
   const swiperElement = new Swiper(".gift-element__slider-block__images", {
     slidesPerView: 2.5,
@@ -263,9 +368,43 @@ let ready = () => {
     });
   }
 
-  btnCheckAll.addEventListener("click", checkAll);
+  if (btnCheckAll) {
+    btnCheckAll.addEventListener("click", checkAll);
+  }
 
   // удалить выбранные
-  deleteSelected.addEventListener("click", deleteSelectedAll);
+  if (deleteSelected) {
+    deleteSelected.addEventListener("click", deleteSelectedAll);
+  }
+
+  // страница профиля кнопки и инпут дизейбл, и изменяет текст
+  if (personalAreaBtn) {
+    personalAreaBtn.forEach((btn, index) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (btn.textContent === "Редактировать") {
+          btn.textContent = "Сохранить";
+          isEditing = false;
+          const currentInput = personalAreaInput[index];
+          currentInput.disabled = false;
+          currentInput.classList.add(
+            "popup__form-input",
+            "clients__input",
+            "auth__input"
+          );
+        } else {
+          btn.textContent = "Редактировать";
+          isEditing = true;
+          const currentInput = personalAreaInput[index];
+          currentInput.disabled = true;
+          currentInput.classList.remove(
+            "popup__form-input",
+            "clients__input",
+            "auth__input"
+          );
+        }
+      });
+    });
+  }
 };
 document.addEventListener("DOMContentLoaded", ready);
