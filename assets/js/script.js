@@ -90,10 +90,21 @@ let ready = () => {
   const recentlyPurchased = document.querySelector(".recently-purchased");
   const clients = document.querySelector(".clients");
 
+  const btnPointPickup = document.querySelector(
+    ".placing-order-pickup__poin-pickup"
+  );
+
+  const pointPickupBox = document.querySelector(
+    ".placing-order-pickup__paragraph-point__box"
+  );
+
+  const radioBtns = document.querySelectorAll(
+    'input[type="radio"][name="delivery"]'
+  );
+
   // закрытие отдельных попапов
   function closeModal() {
     arrOpened.forEach((opened) => {
-      console.log(opened);
       opened.popup?.classList.remove(opened.openedPopup);
       modalBg.style.display = "none";
     });
@@ -517,10 +528,12 @@ let ready = () => {
   const selectSingle = document.querySelector(
     ".placing-order-pickup__form-block"
   );
-  const selectSingleTitle = selectSingle.querySelector(
+
+  const selectSingleTitle = document.querySelector(
     ".placing-order-pickup__form-title"
   );
-  const selectSingleLabels = selectSingle.querySelectorAll(
+
+  const selectSingleLabels = document.querySelectorAll(
     ".placing-order-pickup__form-label"
   );
 
@@ -562,18 +575,6 @@ let ready = () => {
     });
   }
 
-  const btnPointPickup = document.querySelector(
-    ".placing-order-pickup__poin-pickup"
-  );
-
-  const pointPickupBox = document.querySelector(
-    ".placing-order-pickup__paragraph-point__box"
-  );
-
-  const radioBtns = document.querySelectorAll(
-    'input[type="radio"][name="delivery"]'
-  );
-
   if (radioBtns) {
     radioBtns.forEach((btn, index) => {
       btn.addEventListener("change", () => {
@@ -586,8 +587,10 @@ let ready = () => {
     });
   }
 
-  btnPointPickup.addEventListener("click", () => {
-    pointPickupBox.style.display = "flex";
-  });
+  if (btnPointPickup) {
+    btnPointPickup.addEventListener("click", () => {
+      pointPickupBox.style.display = "flex";
+    });
+  }
 };
 document.addEventListener("DOMContentLoaded", ready);
