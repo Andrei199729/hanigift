@@ -10,6 +10,9 @@ let ready = () => {
 
   const btnCall = document.querySelector(".main__banner-telephon__btn");
   const btnClose = document.querySelector(".popup__btn-close");
+  const btnCloseSectionMain = document.querySelector(
+    ".popup__btn-close__block"
+  );
   const popupCall = document.querySelector(".popup__request-call");
 
   const btnReviewsClients = document.querySelector(".reviews-clients__btn");
@@ -25,14 +28,38 @@ let ready = () => {
   const personalAreaBtn = document.querySelectorAll(".personal__area-btn");
   const personalAreaInput = document.querySelectorAll(".personal__area-input");
   let isEditing = false;
-  // мобильная форма отзывов
 
+  // мобильная форма отзывов
   const blockFormReviewsClients = document.querySelector(
     ".popup__container_reviews-clients"
   );
 
   const blockReviewsClients = document.querySelector(
     ".gifts-for-men__container"
+  );
+
+  // открытие и закрытие карты
+  const btnViewMap = document.querySelector(".contacts__our-shop__path-btn");
+  // поворот стрелочки
+  const btnViewMapIcon = document.querySelector(
+    ".contacts__our-shop__path-btn__view-icon"
+  );
+  // карта
+  const contactsMap = document.querySelector(".contacts__map");
+  // состояние карты
+  let isMapVisible = false;
+
+  // Показывает формы доставки или самовывоза
+  const methodDelivery = document.querySelectorAll(
+    ".placing-order-pickup__box-method"
+  );
+
+  const formDelivery = document.querySelector(
+    ".placing-order-pickup__delivery-address-box"
+  );
+
+  const formPickup = document.querySelector(
+    ".placing-order-pickup__pickup-box"
   );
 
   // классы открытия попапов
@@ -48,14 +75,35 @@ let ready = () => {
     },
   ];
 
+  // прячем и показываем блоки при открытие блока заказать звонок на мобильном разрешении
+  const sectionPopup = document.querySelector(".section__popup");
+  const phoneBlock = document.querySelector(".main__banner-telephons__block");
+  const mainBannerLogo = document.querySelector(
+    ".main__banner-container__logo"
+  );
+  const mainBannerImage = document.querySelector(".main__banner-box__image");
+  const hits = document.querySelector(".hits");
+  const population = document.querySelector(".population");
+  const info = document.querySelector(".info");
+  const gallery = document.querySelector(".gallery");
+  const reviews = document.querySelector(".reviews");
+  const recentlyPurchased = document.querySelector(".recently-purchased");
+  const clients = document.querySelector(".clients");
+
   // закрытие отдельных попапов
   function closeModal() {
     arrOpened.forEach((opened) => {
+      console.log(opened);
       opened.popup?.classList.remove(opened.openedPopup);
       modalBg.style.display = "none";
     });
-    blockFormReviewsClients.style.display = "none";
-    blockReviewsClients.style.display = "block";
+    if (blockFormReviewsClients) {
+      blockFormReviewsClients.style.display = "none";
+    }
+    if (blockReviewsClients) {
+      blockReviewsClients.style.display = "block";
+    }
+    sectionPopup.style.display = "none";
   }
 
   function closeModalOnEsc(event) {
@@ -64,11 +112,50 @@ let ready = () => {
     }
   }
 
+  // прячем и показываем блоки при открытие блока заказать звонок на мобильном разрешении
+  const sectionView = [
+    hits,
+    population,
+    info,
+    gallery,
+    reviews,
+    recentlyPurchased,
+    clients,
+    mainBannerLogo,
+    mainBannerImage,
+  ];
+
   if (btnCall) {
     btnCall.addEventListener("click", function (e) {
-      popupCall.classList.add(popupRequestCallOpened);
-      modalBg.style.display = "block";
+      if (window.innerWidth > 500) {
+        popupCall.classList.add(popupRequestCallOpened);
+        modalBg.style.display = "block";
+        popupCall.style.display = "block";
+      }
+      if (window.innerWidth <= 500) {
+        modalBg.style.display = "none";
+        sectionPopup.style.display = "block";
+        popupCall.style.display = "none";
+        btnCall.style.display = "none";
+        phoneBlock.style.flexDirection = "row";
+        phoneBlock.style.gap = "18px";
+        sectionView.forEach((block) => {
+          block.style.display = "none";
+        });
+      }
       document.addEventListener("keydown", closeModalOnEsc);
+    });
+  }
+
+  if (btnCloseSectionMain) {
+    btnCloseSectionMain.addEventListener("click", () => {
+      sectionPopup.style.display = "none";
+      btnCall.style.display = "block";
+      phoneBlock.style.flexDirection = "column";
+      phoneBlock.style.gap = "4px";
+      sectionView.forEach((block) => {
+        block.style.display = "block";
+      });
     });
   }
 
@@ -171,8 +258,8 @@ let ready = () => {
       },
     },
     navigation: {
-      nextEl: ".hits__slider-slider__next",
-      prevEl: ".hits__slider-slider__prev",
+      nextEl: ".hits__next",
+      prevEl: ".hits__prev",
     },
   });
 
@@ -223,7 +310,7 @@ let ready = () => {
       },
 
       1140: {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 30,
       },
 
@@ -233,8 +320,8 @@ let ready = () => {
       },
     },
     navigation: {
-      nextEl: ".recently__slider-slider__next",
-      prevEl: ".recently__slider-slider__prev",
+      nextEl: ".recently-purchased__slider-slider__next",
+      prevEl: ".recently-purchased__slider-slider__prev",
     },
   });
 
@@ -406,5 +493,101 @@ let ready = () => {
       });
     });
   }
+
+  // открытие карты и поворот стрелочки
+  if (btnViewMap) {
+    btnViewMap.addEventListener("click", (e) => {
+      if (!isMapVisible) {
+        btnViewMapIcon.style.transform = "rotate(90deg)";
+        contactsMap.style.visibility = "visible";
+        contactsMap.style.transitionDelay = "0s";
+        contactsMap.style.display = "block";
+        isMapVisible = true;
+      } else {
+        btnViewMapIcon.style.transform = "rotate(270deg)";
+        contactsMap.style.visibility = "hidden";
+        contactsMap.style.transitionDelay = "0s";
+        contactsMap.style.display = "none";
+        isMapVisible = false;
+      }
+    });
+  }
+
+  // Select
+  const selectSingle = document.querySelector(
+    ".placing-order-pickup__form-block"
+  );
+  const selectSingleTitle = selectSingle.querySelector(
+    ".placing-order-pickup__form-title"
+  );
+  const selectSingleLabels = selectSingle.querySelectorAll(
+    ".placing-order-pickup__form-label"
+  );
+
+  // Стилизованный select
+  if (selectSingleTitle) {
+    selectSingleTitle.addEventListener("click", () => {
+      if ("active" === selectSingle.getAttribute("data-state")) {
+        selectSingle.setAttribute("data-state", "");
+      } else {
+        selectSingle.setAttribute("data-state", "active");
+      }
+    });
+  }
+
+  if (selectSingleLabels) {
+    for (let i = 0; i < selectSingleLabels.length; i++) {
+      selectSingleLabels[i].addEventListener("click", (evt) => {
+        selectSingleTitle.textContent = evt.target.textContent;
+        selectSingle.setAttribute("data-state", "");
+      });
+    }
+  }
+
+  // Показывает формы доставки или самовывоза
+
+  if (methodDelivery) {
+    methodDelivery.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+        methodDelivery.forEach((active) => active.classList.remove("active"));
+        btn.classList.add("active");
+        if (btn.classList.contains("active") && index === 0) {
+          formDelivery.style.display = "block";
+          formPickup.style.display = "none";
+        } else if (btn.classList.contains("active") && index === 1) {
+          formPickup.style.display = "block";
+          formDelivery.style.display = "none";
+        }
+      });
+    });
+  }
+
+  const btnPointPickup = document.querySelector(
+    ".placing-order-pickup__poin-pickup"
+  );
+
+  const pointPickupBox = document.querySelector(
+    ".placing-order-pickup__paragraph-point__box"
+  );
+
+  const radioBtns = document.querySelectorAll(
+    'input[type="radio"][name="delivery"]'
+  );
+
+  if (radioBtns) {
+    radioBtns.forEach((btn, index) => {
+      btn.addEventListener("change", () => {
+        if (index === 1) {
+          btnPointPickup.style.display = "block";
+        } else {
+          btnPointPickup.style.display = "none";
+        }
+      });
+    });
+  }
+
+  btnPointPickup.addEventListener("click", () => {
+    pointPickupBox.style.display = "flex";
+  });
 };
 document.addEventListener("DOMContentLoaded", ready);

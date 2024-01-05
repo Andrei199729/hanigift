@@ -877,6 +877,56 @@
   .personal__area-history__container {
     margin-bottom: 12px;
   }
+
+  .news__block {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news__container {
+    margin: 0;
+  }
+
+  .news {
+    padding-bottom: 51px;
+  }
+
+  .news-element__block {
+    flex-direction: column-reverse;
+  }
+
+  .news-element__box {
+    max-width: 100%;
+  }
+
+  .news-element {
+    padding-bottom: 40px;
+  }
+
+  .contacts__address {
+    flex-direction: column;
+  }
+
+  .contacts__image {
+    height: 178px;
+    object-fit: cover;
+  }
+
+  .contacts__image-recvesite {
+    max-width: 100%;
+  }
+
+  .contacts {
+    padding-bottom: 100px;
+  }
+
+  .placing-order-pickup__block {
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .placing-order-pickup {
+    padding-bottom: 57px;
+  }
 }
 
 @media screen and (max-width: 840px) {
@@ -1029,6 +1079,9 @@
     width: calc(41vw + 20px);
   }
 
+  .menu-items__link {
+    max-width: 250px;
+  }
   /* /burger */
 
   .main__banner-catalog__paragraph {
@@ -1054,6 +1107,10 @@
   .main__banner-telephon__btn {
     margin-right: 0;
     padding: 4px 25px;
+  }
+
+  .catalog__banner-telephons__block {
+    margin: 0;
   }
 
   /* hits */
@@ -1111,6 +1168,7 @@
     flex-wrap: wrap;
     gap: 40px;
     padding: 40px 24px 64px;
+    justify-content: center;
   }
 
   .info__block {
@@ -1342,6 +1400,22 @@
 
   .personal__area-history-element__container {
     margin-bottom: 6px;
+  }
+
+  .personal__area-block {
+    display: none;
+  }
+
+  .news-element {
+    padding-bottom: 40px;
+  }
+
+  .contacts {
+    padding-bottom: 100px;
+  }
+
+  .table-page {
+    padding-bottom: 91px;
   }
 }
 
@@ -1613,6 +1687,12 @@
     gap: 4px;
   }
 
+  .catalog__banner-telephons__block {
+    flex-direction: row;
+    gap: 18px;
+    margin: 0;
+  }
+
   .main__banner-telephon__btn {
     margin-right: 0;
     padding: 8px 12px;
@@ -1625,6 +1705,10 @@
   .menu-items__two-container {
     left: 331px;
     width: calc(40vw + 30px);
+  }
+
+  .menu-items__link {
+    max-width: 200px;
   }
 
   .hits__name {
@@ -1732,6 +1816,10 @@
 
   .menu-items__two-lists {
     gap: 18px;
+  }
+
+  .menu-items__link {
+    max-width: 150px;
   }
 
   .hits {
@@ -1845,6 +1933,23 @@
   .personal__area-element {
     padding: 12px;
   }
+
+  .news__block {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+
+  .news__block-paragraph {
+    margin-bottom: 24px;
+  }
+
+  .news {
+    padding-bottom: 40px;
+  }
+
+  .news__block-article {
+    padding: 12px;
+  }
 }
 
 @media screen and (max-width: 530px) {
@@ -1854,6 +1959,15 @@
 
   .personal__area-history__container {
     margin-bottom: 24px;
+  }
+
+  .payment-delivery__images {
+    gap: 19px;
+  }
+
+  .placing-order-pickup__subtitle {
+    font-size: 36px;
+    line-height: 40px;
   }
 }
 
@@ -1871,12 +1985,21 @@
   }
 
   .main__banner-telephons {
-    gap: 8px;
+    gap: 16px;
   }
 
   .main__banner-telephon {
     width: max-content;
   }
+
+  .main__banner-catalog__burger img {
+    display: none;
+  }
+
+  .main__banner-box__image-name {
+    max-width: 105px;
+  }
+
   /* hits */
 
   .hits__title {
@@ -2245,8 +2368,12 @@
   }
 
   .main__banner-telephons__block {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .catalog__banner-telephons__block {
     flex-direction: row;
-    gap: 18px;
   }
 
   .favorites__articale,
@@ -2358,6 +2485,146 @@
   .personal__area-history-element__container {
     margin-bottom: 35px;
   }
+
+  .payment-delivery__images {
+    grid-template-columns: repeat(auto-fit, minmax(62px, 62px));
+    gap: 10px;
+  }
+
+  .payment-delivery__image {
+    width: 62px;
+    height: 43px;
+  }
+
+  .payment-delivery__subtitle {
+    font-size: 26px;
+    line-height: 28px;
+  }
+
+  .payment-delivery__paragraph,
+  .payment-delivery__list,
+  .payment-delivery__paragraph-semibold,
+  .partners__paragraph,
+  .partners__paragraph-semibold,
+  .about-company__paragraph,
+  .about-company__paragraph-semibold,
+  .news-element__paragraph {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .partners__container {
+    margin-bottom: 274px;
+  }
+
+  .about-company__subtitle {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .about-company__awards {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    overflow: scroll;
+  }
+
+  .about-company__container {
+    margin-bottom: 28px;
+  }
+
+  .about-company__box {
+    margin: 24px 0;
+    padding: 12px;
+    gap: 22px;
+  }
+
+  .about-company__video-reviews,
+  .about-company__subtitle {
+    margin-bottom: 24px;
+  }
+
+  .news-element {
+    padding-bottom: 40px;
+  }
+
+  .news-element__title {
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  .news-element__block {
+    gap: 24px;
+  }
+
+  .news-element__box {
+    gap: 22px;
+  }
+
+  .contacts__address {
+    flex-direction: column-reverse;
+  }
+
+  .contacts__image {
+    height: auto;
+    object-fit: contain;
+  }
+
+  .contacts {
+    padding-bottom: 40px;
+  }
+
+  .contacts__our-shop__path-btn {
+    display: none;
+  }
+
+  .contacts__container-blocks {
+    gap: 24px;
+  }
+
+  .contacts__map {
+    display: block;
+    visibility: visible;
+  }
+
+  .placing-order-pickup__box-date {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .placing-order-pickup__title,
+  .placing-order-pickup__box-date {
+    margin-bottom: 24px;
+  }
+
+  .placing-order-pickup__form-contacts__info {
+    margin-bottom: 16px;
+  }
+
+  .placing-order-pickup__block {
+    gap: 32px;
+  }
+
+  .placing-order-pickup {
+    padding-bottom: 47px;
+  }
+
+  .placing-order-pickup__radio-btns {
+    flex-wrap: wrap;
+  }
+
+  .placing-order-pickup__form-contacts__info-box {
+    flex-direction: column;
+  }
+
+  .call__input {
+    padding: 9px 12px;
+  }
+
+  .call__textarea {
+    height: 208px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -2367,6 +2634,10 @@
 
   .personal__area-element__paragraph {
     max-width: 160px;
+  }
+
+  .table td {
+    padding: 12px;
   }
 }
 
@@ -2537,6 +2808,10 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+
+  .catalog__banner-telephons__block {
+    flex-direction: row;
   }
 
   .main__banner-telephon__btn {
@@ -2805,5 +3080,13 @@
   .reviews-clients__paragraph {
     max-width: 100%;
     width: 100%;
+  }
+
+  .call__input {
+    padding: 9px 12px;
+  }
+
+  .call__textarea {
+    height: 208px;
   }
 }

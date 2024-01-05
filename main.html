@@ -84,6 +84,27 @@
                     </div>
                 </div>
             </section>
+            <section class="section__popup">
+                <div class="popup__container-main">
+                    <div class="popup__block">
+                        <h3 class="popup__subtitle">Заказать звонок</h3>
+                        <button class="popup__btn-close__block"></button>
+                    </div>
+                    <form class="popup__form clients__form" action="">
+                        <div class="popup__form-fields clients__form-fields">
+                            <input class="popup__form-input clients__input call__input" type="text" placeholder="Имя">
+                            <input class="popup__form-input clients__input call__input" type="text"
+                                placeholder="Телефон или e-mail">
+                            <textarea class="popup__form-textarea clients__textarea call__textarea" name="" id=""
+                                cols="30" rows="10" placeholder="Комментарий"></textarea>
+                        </div>
+                        <button class="popup__form-btn clients__btn" type="submit">Отправить</button>
+                        <p class="popup__paragraph">Нажимая кнопку “Отправить” <span class="popup__paragraph-span">Вы
+                                соглашаетесь с Политикой
+                                обработки персональных данных.</span></p>
+                    </form>
+                </div>
+            </section>
             <section class="hits">
                 <div class="menu__container">
                     <ul class="menu-items">
@@ -259,8 +280,8 @@
                     <div class="hits__block-slider">
                         <h2 class="hits__block-slider__title">Хиты</h2>
                         <div class="hits__slider-btn__box">
-                            <button class="btn__slider hits__slider-slider__prev"></button>
-                            <button class="btn__slider hits__slider-slider__next"></button>
+                            <button class="btn__slider hits__slider-slider__prev hits__prev"></button>
+                            <button class="btn__slider hits__slider-slider__next hits__next"></button>
                         </div>
                     </div>
                     <div class="hits__container-slider">
